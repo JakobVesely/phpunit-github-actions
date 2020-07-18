@@ -1,4 +1,4 @@
-name: PHP Composer
+name: CI - Unit Tests & Coverage
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
     - name: Install dependencies
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: |
-        composer install --no-suggest --prefer-dist --optimize-autoloader
+        composer install --no-suggest --prefer-dist --optimize-autoloader --no-progress
         php -r "file_exists('.env') || copy('.env.example', '.env');"
         php artisan key:generate
         
