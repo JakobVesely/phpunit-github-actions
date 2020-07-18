@@ -37,8 +37,6 @@ jobs:
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: |
         composer install --no-suggest --prefer-dist --optimize-autoloader --no-progress
-        php -r "file_exists('.env') || copy('.env.example', '.env');"
-        php artisan key:generate
         
     - name: Run Tests
       run: ./vendor/bin/phpunit --testdox --coverage-clover=clover.xml
