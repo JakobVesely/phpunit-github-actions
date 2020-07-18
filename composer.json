@@ -9,6 +9,7 @@
             "email": "jakob@appartig.at"
         }
     ],
+    "description: "",
     "require": {
         "phpunit/phpunit": "^9.2",
         "phpunit/php-code-coverage": "^8.0"
