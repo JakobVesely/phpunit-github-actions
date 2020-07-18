@@ -19,7 +19,7 @@
 
 		public static function boolVal($mixed)
 		{
-			if ($mixed == 1 || $mixed == true)
+			if (($mixed == 1 || $mixed == true) && $mixed != "false")
 			{
 				return true;
 			}
