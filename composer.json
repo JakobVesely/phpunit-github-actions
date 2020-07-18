@@ -1,0 +1,21 @@
+{
+    "name": "fyi.jakob/phpunit-github-actions",
+    "version": "v3.0.0-beta.1",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jakob Vesely",
+            "email": "jakob@appartig.at"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.2",
+        "phpunit/php-code-coverage": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fyi\\Jakob\\": "src/"
+        }
+    }
+}
