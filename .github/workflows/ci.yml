@@ -39,7 +39,13 @@ jobs:
         composer install --no-suggest --prefer-dist --optimize-autoloader --no-progress
         
     - name: Run Tests
-      run: ./vendor/bin/phpunit tests --testdox --coverage-clover=clover.xml
+      run: ./vendor/bin/phpunit tests --testdox
       
     - name: Print Clover XML
-      run: cat clover.xml
+      run: cat build/clover.xml
+    
+    - name: Run codacy-coverage-reporter
+      uses: codacy/codacy-coverage-reporter-action@master
+      with:
+        project-token: ${{ secrets.CODACY_CODE_COVERAGE_TOKEN }}
+        coverage-reports: build/clover.xml
