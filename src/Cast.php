@@ -4,9 +4,6 @@
 
     class Cast
     {
-        public function __construct()
-        { }
-
         public static function emptyStringIfNull($str)
 		{
 			if ($str == null)

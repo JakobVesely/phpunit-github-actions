@@ -5,9 +5,6 @@
 
 	final class CastTest extends TestCase
 	{	
-		public static function setUpBeforeClass(): void
-		{ }
-
         public function test_shouldBe_sameString_when_string ()
         {
             $this->assertEquals(
