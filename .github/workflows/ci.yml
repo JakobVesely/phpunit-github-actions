@@ -14,12 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
-    - uses: shivammathur/setup-php@master
-      with:
-        coverage: pcov
-        php-version: '7.4'
-        extension: dom, fileinfo, mbstring  
 
     - name: Validate composer.json and composer.lock
       run: composer validate
